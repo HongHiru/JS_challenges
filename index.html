@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hong's App</title>
+  </head>
+  <body>
+    <header>
+      <div id="weather"><span></span><span></span></div>
+      <h2 id="clock"></h2>
+    </header>
+    <div id="main">
+      <article>
+        <form id="login_form" class="hidden">
+          <input type="text" placeholder="Please write your name!" />
+          <button>Click!</button>
+        </form>
+        <h1 id="log_in" class="hidden"></h1>
+        <form id="todo_form" class="hidden">
+          <input
+            type="text"
+            placeholder="Write a To Do and Press Enter."
+            required
+          />
+        </form>
+        <ul id="todo_list"></ul>
+      </article>
+    </div>
+    <footer>
+      <p>
+        <span id="wave">Copyright 2023. cocoder. All Rights Reserved.</span>
+      </p>
+    </footer>
+    <canvas></canvas>
+    <script src="js/canvas.js"></script>
+    <script src="js/log_in.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/css.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather_location.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+}
+body {
+  margin: 0;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#main {
+  display: flex;
+  min-height: calc(100vh - 40vh);
+}
+#main > article {
+  flex: 1;
+}
+header,
+article {
+  padding: 1em;
+}
+footer {
+  padding: 1em;
+  text-align: center;
+}
+header,
+footer {
+  height: 20vh;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+  list-style: square inside;
+}
+#weather > span {
+  font-size: 20px;
+  color: goldenrod;
+}
+button {
+  background: white;
+  border: 0;
+  border-radius: 1em;
+  color: orangered;
+  padding: 0 1em;
+  margin-left: 0.3em;
+}
+input {
+  color: black;
+  margin-bottom: 30px;
+}
+@keyframes fall {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#todo_list li {
+  animation: fall 1s ease-out;
+  margin: 5px;
+  color: green;
+}
+
+#todo_list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  font-size: 40px;
+  animation: shake 5s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+
+h2 {
+  font-size: 35px;
+}
+@keyframes wave {
+  0%,
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rainbow {
+  0%,
+  90% {
+    color: inherit;
+  }
+  95% {
+    color: red;
+  }
+  96% {
+    color: orange;
+  }
+  97% {
+    color: yellow;
+  }
+  98% {
+    color: green;
+  }
+  99% {
+    color: blue;
+  }
+  100% {
+    color: violet;
+  }
+}
+
+#wave span {
+  display: inline-block;
+  animation-name: wave, rainbow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
